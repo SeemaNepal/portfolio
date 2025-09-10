@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seema Nepal Portfolio</title>
+  <!-- Bootstrap CSS (jsDelivr CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <style>
+    /* ---- small utility tweaks for this demo ---- */
+    :root{
+      --content-max: 1200px;
+      --card-sub-width: 84%;
+    }
+
+    body{
+      font-family: "Playfair Display", serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+      background-color: #F8F3EA;
+      color: #0B1957
+    }
+    /* Full-width hero */
+    .hero{
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      background-color: #9ECCFA;
+      background-size: cover;
+      background-position: center;
+    }
+    .hero .inner{ max-width: var(--content-max); }
+
+    /* Two-column section spacing */
+    .lead-copy { font-size: 1.05rem; line-height: 1.6; }
+    .feature-image{ width:100%; height:320px; object-fit:cover; border-radius: .5rem; }
+
+    /* Cards grid uses CSS grid for nicer control than raw bootstrap cols */
+    .cards-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      max-width: var(--content-max);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Make each card the same height and align subcard */
+    .card.h-100{ display:flex; flex-direction:column; }
+    .card .card-body{ flex:1 1 auto; }
+
+    /* the "less wide card under them" effect */
+    .subcard{
+      width: var(--card-sub-width);
+      margin: 0 auto; /* center */
+      transform: translateY(6px);
+      box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+      border-radius: 0.5rem;
+    }
+
+    h1{
+      font-style: italic;
+      font-size: 86px;
+    }
+
+   ul{
+    font-size: 20px;
+   }
+
+   a{
+    all:unset;
+   }
+   a:hover{
+    color:white;
+   }
+
+    /* responsive tweaks */
+    @media (max-width:575px){
+      .hero{ min-height: 240px; }
+      .feature-image{ height:200px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Full-width header / hero -->
+  <header class="hero">
+    <div class="container-fluid inner">
+      <div class="row text-center">
+        <div class="col-12">
+          <h1 class="fw-bold">Seema Nepal</h1>
+          <p class="lead">Content Creator & Social Media Marketing</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container px-4" style="max-width:var(--content-max);">
+      <!-- Two column: text left, picture right -->
+      <section class="row align-items-center g-4">
+        <div class="col-12 col-md-7 order-2 order-md-1">
+        <h2>I specialize in marketing and business operations</h2>
+        <p class="lead-copy">Hi, My name is Seema and I am a marketing enthusiast and social media strategist with a passion for creating engaging and memorable experiences. Currently pursuing a Bachelor of Arts in Business and Psychology at Brandeis University, I have had the opportunity to manage diverse marketing campaigns that blend creativity, strategy, and community engagement.
+        </p>
+        <p>From organizing campus-wide events like drag bingo, where I handled everything from agent communication and contract development to budgeting, promotions, and venue decoration to analyzing major marketing successes like the Barbie movie campaign, I thrive on bringing ideas to life and connecting with audiences. My work is driven by a fascination with how creative collaborations and viral moments can elevate brand identity and foster genuine community connections.
+        </p>
+
+        </div>
+
+        <div class="col-12 col-md-5 order-1 order-md-2">
+          <!-- Responsive image — replace with a real asset, ideally <picture> with srcset -->
+          <img src="images/headshot.jpg" alt="Seema Nepal headshot" class="feature-image shadow-sm" loading="lazy" />
+        </div>
+      </section>
+
+      <!-- Title above cards -->
+      <section class="my-5 text-center">
+        <h3 id="cards" class="mb-3">Featured Work</h3>
+        <p class="text-muted">Optional caption about your work experience.</p>
+      </section>
+
+      <!-- Cards grid -->
+      <section>
+        <div class="cards-grid">
+          <!-- Repeat this article for each card (5 total) -->
+          <article class="card shadow-sm">
+            <img src="https://picsum.photos/seed/c1/800/400" class="card-img-top" alt="Card image 1">
+            <div class="card-body">
+              <h5 class="card-title">Card title 1</h5>
+              <p class="card-text">Short blurb that explains theontain the project.</p>
+            </div>
+          </article>
+
+          <article class="card shadow-sm">
+            <img src="https://picsum.photos/seed/c1/800/400" class="card-img-top" alt="Card image 1">
+            <div class="card-body">
+              <h5 class="card-title">Card title 1</h5>
+              <p class="card-text">Short blurb that explains theontain the project.</p>
+            </div>
+          </article>
+
+          <article class="card shadow-sm">
+            <img src="https://picsum.photos/seed/c1/800/400" class="card-img-top" alt="Card image 1">
+            <div class="card-body">
+              <h5 class="card-title">Card title 1</h5>
+              <p class="card-text">Short blurb that explains theontain the project.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="my-5">
+        <h3 class="text-center pb-5">Skills and Certifications</h3>
+        <div class="row">
+          <div class="col text-aligned-left">
+            <ul>
+              <li>Content Creation</li>
+              <li>Brand Ambassador</li>
+              <li>Canva</li>
+              <li>Google Analytics</li>
+              <li>Slack</li>
+              <li>Smartsheets</li>
+              <li>G Suite</li>
+              <li>Microsoft Office</li>
+              <li>Mailchimp</li>
+              <li>One Trust</li>
+              <li>Marketo</li>
+              <li>Veeva Vault</li>
+              <li>Litmus</li>
+              <li>RECenter</li>
+            </ul>
+          </div>
+          <div class="col">
+            <img src="images/skills.png">
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-4 px-3 text-muted" style="background-color: #9ECCFA;">
+   <div class="row">
+    <div class="col text-center pt-3" style="font-style: italic;">
+      <h2>Let's Connect</h2> 
+    </div>
+    <div class="col">
+      <small>Email:</small>
+      <a href="mailto:seemanepal194@gmail.com"><h5>seemanepal194@gmail.com</h5></a>
+      <small>LinkedIn:</small>
+      <a href="https://www.linkedin.com/in/seema-n-/"><h5>linkedin.com/in/seema-n-/</h5></a>
+    </div>
+   </div>
+  </footer>
+
+  <!-- Bootstrap bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
